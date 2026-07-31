@@ -16,10 +16,7 @@ st.set_page_config(
 # ---------------------------------------------------
 @st.cache_data
 def load_data():
-    df = pd.read_csv(r"C:\Users\Somendar Das\Desktop\Ecom-DV\master_dataset.csv")
-
-    df["order_purchase_timestamp"] = pd.to_datetime(df["order_purchase_timestamp"])
-
+    df = pd.read_csv("master_dataset.csv")
     return df
 
 master_df = load_data()
